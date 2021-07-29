@@ -89,7 +89,7 @@ class FlagCommand(commands.Command):
 
         result = []
         for name, param in params.items():
-            greedy = isinstance(param.annotation, converter._Greedy)
+            greedy = isinstance(param.annotation, converter.Greedy)
 
             if param.default is not param.empty:
                 # We don't want None or '' to trigger the [name=value] case and instead it should
